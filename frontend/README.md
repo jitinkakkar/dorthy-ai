@@ -1,30 +1,36 @@
-# ChatKit Frontend
+# Dorthy AI Frontend
 
-This Vite + React client wraps the ChatKit web component in a slim list UI so you can focus on iterating with the backend agent. It mirrors the root README tone while surfacing the project paths and configuration you need day to day.
+React + TypeScript frontend with OpenAI ChatKit for Dorthy AI chatbot.
 
-## Quick Reference
-- App entry point: `src/main.tsx`
-- ChatKit config helper: `src/lib/config.ts`
-- Cat dashboard UI: `src/App.tsx` and `src/components`
-- Styling: `src/index.css` (Tailwind layers)
+## Setup
 
-## Requirements
-- Node.js 20+
-- Backend API running locally (defaults to `http://127.0.0.1:8000`).
-
-## Environment Variables
-
-Optional overrides include `VITE_CHATKIT_API_URL`, `VITE_CAT_STATE_API_URL`, and `VITE_CHATKIT_API_DOMAIN_KEY`. If you change them, restart `npm run dev` so Vite reloads the new values.
-
-## Install & Run
-
+1. Install dependencies:
 ```bash
 npm install
+```
+
+2. Run dev server:
+```bash
 npm run dev
 ```
 
-The dev server is available at `http://127.0.0.1:5170`, which works for local development. To test remote access flows, you can temporarily expose the app with a tunnel (for example `ngrok http 5170`) after allowlisting that hostname.
+3. Open browser:
+```
+http://127.0.0.1:5170
+```
 
-For production deployments, host the app on infrastructure you control behind a managed domain. Register that domain on the [domain allowlist page](https://platform.openai.com/settings/organization/security/domain-allowlist), add it to `frontend/vite.config.ts` under `server.allowedHosts`, and set the resulting key via `VITE_CHATKIT_API_DOMAIN_KEY`.
+## Configuration
 
-Need backend guidance? See the root README for FastAPI setup and domain allowlisting steps.
+Edit `src/lib/config.ts` to customize:
+- Greeting message
+- Starter prompts  
+- Chat placeholder text
+- Theme colors
+
+## Key Files
+
+- `src/App.tsx` - Main application component
+- `src/components/ChatKitPanel.tsx` - ChatKit integration
+- `src/components/ThemeToggle.tsx` - Dark/light theme switcher
+- `src/lib/config.ts` - Configuration settings
+- `src/store/useAppStore.ts` - Global state (Zustand)

@@ -2,6 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dorthy AI Brand Colors */
+:root {
+  --color-primary: #a4984b;    /* Muted gold/olive - primary */
+  --color-secondary: #1d5b5f;  /* Dark teal - secondary */
+  --color-accent-1: #f1bd3f;   /* Golden yellow - accent */
+  --color-accent-2: #f8c954;   /* Light golden - highlight */
+}
+
+/* Modern glassmorphism and animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+/* Add subtle animations to decorative elements */
+.pointer-events-none > div {
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+/* Animate header on load */
+header > div > div:first-child {
+  animation: slide-up 0.6s ease-out;
+}
+
+header > div > div:last-child {
+  animation: slide-up 0.8s ease-out 0.2s both;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(29, 91, 95, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(29, 91, 95, 0.3);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 91, 95, 0.5);
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;

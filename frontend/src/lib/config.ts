@@ -1,5 +1,4 @@
 import { StartScreenPrompt } from "@openai/chatkit";
-import { DEFAULT_CAT_STATE } from "./cat";
 
 export const CHATKIT_API_URL =
   import.meta.env.VITE_CHATKIT_API_URL ?? "/chatkit";
@@ -13,41 +12,32 @@ export const CHATKIT_API_URL =
 export const CHATKIT_API_DOMAIN_KEY =
   import.meta.env.VITE_CHATKIT_API_DOMAIN_KEY ?? "domain_pk_localhost_dev";
 
-export const CAT_STATE_API_URL =
-  import.meta.env.VITE_CAT_STATE_API_URL ?? "/cats";
-
 export const THEME_STORAGE_KEY = "chatkit-boilerplate-theme";
 
-export const GREETING = "Welcome to the cozy cat lounge";
+export const GREETING = "Welcome! Let's find your dream home in Ontario 🏡";
+
+export const MESSAGE = `
+  I'm here to guide you through first-time home buyer programs and help you understand your options.
+`;
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "Name ideas",
-    prompt: "Could you suggest some fun names for the cat?",
-    icon: "book-open",
-  },
-  {
-    label: "Check on the cat",
-    prompt: "How is the cat doing today?",
-    icon: "circle-question",
-  },
-  {
-    label: "Feed time",
-    prompt: "Please feed the cat something tasty.",
+    label: "Getting started",
+    prompt: "I'm interested in buying my first home in Ontario",
     icon: "sparkle",
   },
   {
-    label: "Play time",
-    prompt: "Please play with the cat using a fun toy.",
-    icon: "confetti",
+    label: "Available programs",
+    prompt: "What programs are available for first-time buyers?",
+    icon: "book-open",
   },
   {
-    label: "Profile card",
-    prompt: "Can you show me the cat's profile card?",
-    icon: "square-text",
+    label: "Learn more",
+    prompt: "Help me understand the home buying process",
+    icon: "circle-question",
   },
 ];
 
-export const getPlaceholder = (catName: string | null) => {
-  return catName === DEFAULT_CAT_STATE.name ? "Ask how the cat feels or what it needs" : `${catName}, what would you like to do?`;
+export const getPlaceholder = () => {
+  return "Ask me anything about buying your first home in Ontario...";
 };
