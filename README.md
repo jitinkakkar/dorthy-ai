@@ -129,9 +129,26 @@ npm run dev
 
 ---
 
+## Deployment
+
+### 🚂 Railway (Recommended)
+
+Deploy both backend and frontend directly from GitHub in minutes!
+
+**[📖 Railway Deployment Guide →](./RAILWAY_DEPLOYMENT.md)**
+
+Quick steps:
+1. Push code to GitHub ✅
+2. Connect Railway to your repo
+3. Add environment variables
+4. Deploy! 🚀
+
+---
+
 ## Documentation
 
-- **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - Detailed setup and troubleshooting
+- **[RAILWAY_DEPLOYMENT.md](./RAILWAY_DEPLOYMENT.md)** - Deploy to Railway from GitHub
+- **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - Local development setup and troubleshooting
 
 ---
 

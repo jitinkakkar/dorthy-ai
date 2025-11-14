@@ -14,16 +14,22 @@ export default defineConfig({
         target: backendTarget,
         changeOrigin: true,
       },
-      "/cats": {
+    },
+    // For production deployments, add your public domains to this list
+    allowedHosts: [
+      ".railway.app",
+      ".ngrok.io",
+      ".trycloudflare.com",
+    ],
+  },
+  preview: {
+    port: 5170,
+    host: "0.0.0.0",
+    proxy: {
+      "/chatkit": {
         target: backendTarget,
         changeOrigin: true,
       },
     },
-    // For production deployments, you need to add your public domains to this list
-    allowedHosts: [
-      // You can remove these examples added just to demonstrate how to configure the allowlist
-      ".ngrok.io",
-      ".trycloudflare.com",
-    ],
   },
 });
