@@ -25,20 +25,20 @@ export default function App() {
       <div className="relative z-10 h-full flex flex-col lg:flex-row items-stretch gap-0">
         
         {/* Left side - Hero section */}
-        <div className="flex-shrink-0 w-full lg:w-[45%] flex flex-col justify-center items-center p-4 py-6 lg:p-12 relative">
+        <div className="flex-shrink-0 w-full lg:w-[45%] flex flex-col justify-center items-center p-4 py-6 lg:p-8 relative">
           {/* Decorative accent shape */}
           <div className="absolute top-10 right-10 w-32 h-32 border-4 border-[#f1bd3f]/30 rounded-3xl rotate-12 hidden lg:block"></div>
           <div className="absolute bottom-20 left-10 w-24 h-24 border-4 border-[#f8c954]/20 rounded-full hidden lg:block"></div>
           
-          <div className="max-w-xl flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-8 animate-fade-in">
+          <div className="max-w-xl flex flex-col items-center lg:items-start text-center lg:text-left space-y-3 lg:space-y-5 animate-fade-in">
             {/* Logo */}
             <div className="bg-white/95 backdrop-blur-xl rounded-3xl px-6 py-3 lg:px-10 lg:py-5 shadow-2xl border border-white/50 ring-2 ring-[#f1bd3f]/30 transform hover:scale-105 hover:rotate-1 transition-all duration-500">
               <img src="/logo.png" alt="Dorthy AI" className="h-12 lg:h-20 w-auto" />
             </div>
 
             {/* Tagline - Compact on mobile */}
-            <div className="space-y-2 lg:space-y-4">
-              <h1 className="text-2xl lg:text-6xl font-bold leading-tight">
+            <div className="space-y-2 lg:space-y-3">
+              <h1 className="text-2xl lg:text-5xl font-bold leading-tight">
                 <span className="text-white/90">There's </span>
                 <span className="text-white relative inline-block">
                   NO
@@ -55,12 +55,12 @@ export default function App() {
                 <br className="hidden lg:block" />
                 <span className="text-white/90"> place like</span>
                 <br />
-                <span className="text-3xl lg:text-7xl bg-gradient-to-r from-[#f1bd3f] via-[#f8c954] to-[#f1bd3f] bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
+                <span className="text-3xl lg:text-6xl bg-gradient-to-r from-[#f1bd3f] via-[#f8c954] to-[#f1bd3f] bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
                   your own
                 </span>
               </h1>
               
-              <p className="text-sm lg:text-xl text-white/70 font-light max-w-md hidden lg:block">
+              <p className="text-sm lg:text-lg text-white/70 font-light max-w-md hidden lg:block">
                 Your personal AI guide for finding and buying your dream home in Ontario
               </p>
             </div>
@@ -68,13 +68,61 @@ export default function App() {
             {/* Feature badges - Hidden on mobile */}
             <div className="hidden lg:flex flex-wrap gap-3 justify-center lg:justify-start">
               <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-white/90 text-sm font-medium">
-                ✨ AI-Powered
+                ✨ AI-Powered Advice
               </div>
               <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-white/90 text-sm font-medium">
                 🏠 Ontario Focused
               </div>
               <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-white/90 text-sm font-medium">
-                💡 Expert Guidance
+                🔒 Anonymous
+              </div>
+            </div>
+
+            {/* Disclaimer/Purpose Banner - Desktop */}
+            <div className="hidden lg:block bg-[#f1bd3f]/20 backdrop-blur-sm border-l-4 border-[#f1bd3f] rounded-lg p-3 max-w-xl">
+              <div className="space-y-3">
+                {/* Privacy Section */}
+                <div className="flex items-start gap-2">
+                  <div className="flex-shrink-0 text-[#f1bd3f] text-lg w-6">🔒</div>
+                  <div className="flex-1 text-xs text-white/90 leading-snug space-y-1.5">
+                    <p className="font-medium text-sm">Your Privacy</p>
+                    <p className="text-white/80">
+                      Everything you share is <strong>anonymous</strong>. I don't collect names, addresses, or personal identifiers.
+                    </p>
+                    <p className="text-white/70 text-[11px]">
+                      ✓ Not used to train external AI models<br/>
+                      ✓ Never shared with third parties, unless you decide to work with a specialist<br/>
+                      ✓ A human may review responses to improve accuracy
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Coverage Section */}
+                <div className="flex items-start gap-2 pt-2 border-t border-white/10">
+                  <div className="flex-shrink-0 text-[#f1bd3f] text-lg w-6">📍</div>
+                  <div className="flex-1 text-xs text-white/90 leading-snug space-y-1">
+                    <p className="font-medium text-sm">Coverage</p>
+                    <p className="text-white/80">
+                      Federal programs, Ontario provincial programs and select municipality programs. Expanding to more areas as we chat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Disclaimer/Purpose Banner - Mobile Compact */}
+            <div className="lg:hidden bg-[#f1bd3f]/20 backdrop-blur-sm border-l-4 border-[#f1bd3f] rounded-lg p-3 max-w-xl">
+              <div className="flex items-start gap-2">
+                <div className="flex-shrink-0 text-[#f1bd3f] text-base">🔒</div>
+                <div className="flex-1 text-xs text-white/90 leading-snug">
+                  <p className="font-medium mb-1">Your Privacy</p>
+                  <p className="text-white/80 text-[11px] mb-1">
+                    Anonymous & confidential. Never shared with third parties, unless you decide to work with a specialist.
+                  </p>
+                  <p className="text-white/80 text-[11px]">
+                    📍 Federal, Ontario provincial & municipal programs. Expanding soon!
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -14,30 +14,21 @@ export const CHATKIT_API_DOMAIN_KEY =
 
 export const THEME_STORAGE_KEY = "chatkit-boilerplate-theme";
 
-export const GREETING = "Welcome! Let's find your dream home in Ontario 🏡";
+export const GREETING = "Hi, I'm Dorthy — Your AI guide for first-time home buyers 🏡";
 
-export const MESSAGE = `
-  I'm here to guide you through first-time home buyer programs and help you understand your options.
-`;
+export const MESSAGE = "I help you discover federal, provincial, and municipal housing programs you may qualify for. Everything is anonymous and confidential.";
+
+export const DISCLAIMER = 
+  "This chatbot helps you understand Canadian housing assistance programs available for first-time home buyers. Currently trained on Ontario provincial programs and certain municipalities in Ontario.";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "Getting started",
-    prompt: "I'm interested in buying my first home in Ontario",
+    label: "I want to know what housing programs I qualify for",
+    prompt: "I want to know what housing programs I qualify for",
     icon: "sparkle",
-  },
-  {
-    label: "Available programs",
-    prompt: "What programs are available for first-time buyers?",
-    icon: "book-open",
-  },
-  {
-    label: "Learn more",
-    prompt: "Help me understand the home buying process",
-    icon: "circle-question",
   },
 ];
 
 export const getPlaceholder = () => {
-  return "Ask me anything about buying your first home in Ontario...";
+  return "Share your details to discover programs you may qualify for...";
 };
